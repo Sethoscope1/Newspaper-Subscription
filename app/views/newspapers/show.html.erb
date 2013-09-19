@@ -1,5 +1,14 @@
-<h1>Your Newspaper</h1>
+<h1><%= @newspaper.title.capitalize %></h1>
 
-    <%= @newspaper = Newspaper.find(params[:id]) %>
+<h2>Subscription Plans</h2>
 
-<h2><%= @newspaper.title %></h2>
+  <% SubscriptionPlan.where("newspaper_id = #{@newspaper.id}").all.each do |paper| %>
+
+  <h3>Format: <%= paper.weekly == true ? "Weekly" : "Daily" %></h3>
+  <h3>Price: <%= paper.price %></h3>
+
+
+  <br>
+
+  <% end %>
+

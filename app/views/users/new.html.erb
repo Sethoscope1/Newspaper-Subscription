@@ -1,0 +1,12 @@
+<h1>Hey, User! What do you want?</h1>
+
+<form action="<%= users_url %>" method="post" accept-charset="utf-8">
+
+  <label>Name
+    <input type="text" name="user[name]" value="" id="user_name">
+  </label>
+
+  <%= render 'subscribe' %>
+
+  <p><input type="submit" value="Give me your money!"></p>
+</form>

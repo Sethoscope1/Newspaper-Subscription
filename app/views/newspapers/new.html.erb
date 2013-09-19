@@ -12,27 +12,19 @@
 
   <h2>Subscription Plans</h2>
 
+  <% @newspaper.subscription_plans.each do |plan| %>
 
   <label>Price
-    <input type="decimal" name="subscription_plans[0][price]" id="subscription_plan_price">
+    <input type="decimal" name="subscription_plans[<%= plan.object_id %>][price]" id="subscription_plan_price">
   </label>
 
-    <input type="radio" name="subscription_plans[0][weekly]" value="true" id="subscription_plan_weekly">Weekly
+    <input type="radio" name="subscription_plans[<%= plan.object_id %>][weekly]" value="true" id="subscription_plan_weekly">Weekly
 
-    <input type="radio" name="subscription_plans[0][weekly]" value="false">Daily
+    <input type="radio" name="subscription_plans[<%= plan.object_id %>][weekly]" value="false">Daily
 
     <br>
 
-    <label>Price
-      <input type="decimal" name="subscription_plans[1][price]" id="subscription_plan_price">
-    </label>
-
-      <input type="radio" name="subscription_plans[1][weekly]" value="true" id="subscription_plan_weekly">Weekly
-
-      <input type="radio" name="subscription_plans[1][weekly]" value="false">Daily
-
-
-
+  <% end %>
 
   <p><input type="submit" value="Create a Newspaper"></p>
 

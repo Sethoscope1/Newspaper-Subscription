@@ -1,0 +1,19 @@
+<h1>Welcome back, <%= @user.name %></h1>
+
+
+<h2>You Subscribe to: </h2>
+  <% @user.subscription_plans.each do |plan| %>
+
+    <h3><%= Newspaper.find(plan.newspaper_id).title %></h3>
+
+    <%= plan.weekly ? "Weekly" : "Daily" %>
+
+    <br>
+
+    <%= plan.price %>
+
+    <br>
+
+    <br>
+
+  <% end %>

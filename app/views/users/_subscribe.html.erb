@@ -1,0 +1,20 @@
+<h3>Magazine Subscriptions</h3>
+
+
+<% Newspaper.all.each do |paper| %>
+
+<select name="subscription[<%= paper.object_id %>]" size="1">
+
+  <option value=""><%= paper.title %>
+
+    <%= paper.subscription_plans.each do |plan| %>
+  <option value=<%="#{plan.id}"%>>
+    <%="#{plan.weekly ? "Weekly" : "Daily"} #{plan.price}"%>
+  </option>
+
+  <% end %>
+
+</select>
+<br>
+
+<% end %>
