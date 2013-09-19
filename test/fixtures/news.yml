@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  SubscriptionPlan: MyString
+  price: 9.99
+  weekly: false
+  newspaper_id: 1
+
+two:
+  SubscriptionPlan: MyString
+  price: 9.99
+  weekly: false
+  newspaper_id: 1

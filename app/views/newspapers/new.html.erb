@@ -1,0 +1,39 @@
+<h1>Submit a New Paper</h1>
+
+<form action="/newspapers" method="post" accept-charset="utf-8">
+
+  <label>Title
+    <input type="text" name="newspaper[title]" id="newspaper[title]">
+  </label>
+
+  <label>Editor
+    <input type="text" name="newspaper[editor]" id="newspaper_editor">
+  </label>
+
+  <h2>Subscription Plans</h2>
+
+
+  <label>Price
+    <input type="decimal" name="subscription_plans[0][price]" id="subscription_plan_price">
+  </label>
+
+    <input type="radio" name="subscription_plans[0][weekly]" value="true" id="subscription_plan_weekly">Weekly
+
+    <input type="radio" name="subscription_plans[0][weekly]" value="false">Daily
+
+    <br>
+
+    <label>Price
+      <input type="decimal" name="subscription_plans[1][price]" id="subscription_plan_price">
+    </label>
+
+      <input type="radio" name="subscription_plans[1][weekly]" value="true" id="subscription_plan_weekly">Weekly
+
+      <input type="radio" name="subscription_plans[1][weekly]" value="false">Daily
+
+
+
+
+  <p><input type="submit" value="Create a Newspaper"></p>
+
+</form>
